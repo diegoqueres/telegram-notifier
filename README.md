@@ -81,7 +81,7 @@ Ready! Now we have everything we need to send notifications and start the notifi
 
 Clone this project
 ```sh
-$ https://github.com/diegoqueres/telegram-notifier
+$ git clone git@github.com:diegoqueres/telegram-notifier.git
 ```
 
 Enter on project path, and create a environment file: _.env_ like the _.env.example_, with your own values to env variables.
@@ -105,7 +105,7 @@ Use the endpoint: _POST `/api/v1/notify`_ to send notifications.
 Run this curl to send your first notification:
 ```sh
 curl --request POST \
-  --url http://localhost:3010/api/v1/notify \
+  --url http://localhost:{{your api port}}/api/v1/notify \
   --header 'Bot-Token: {{your bot token}}' \
   --header 'Chat-Id: {{your chat id}}' \
   --header 'Content-Type: application/json' \
