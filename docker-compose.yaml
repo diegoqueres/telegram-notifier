@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    command: sh -c "npm start"
+    ports:
+      - ${PORT}:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    network_mode: host
